@@ -29,3 +29,6 @@ df_director <- df %>%
 miss_var_summary(df)
 vis_miss(df)
 is.na(df$Seasons) <- mean(df$Seasons, na.rm = T)
+df$Seasons[is.na(df$Seasons)] <- mean(df$Seasons, na.rm = T)
+df$Minutes[is.na(df$Minutes)] <- mean(df$Seasons, na.rm = T)
+
