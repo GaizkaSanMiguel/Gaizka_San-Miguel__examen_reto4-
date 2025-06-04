@@ -23,19 +23,3 @@ function(Transformar) {
     }
     return(histograma)
 }
-
-
-histograma_funcion <- function(Transformar) {
-  df <- read.csv("C:/Users/Umiak/Downloads/Examen Data Science/netflix.csv")
-  if (Transformar == "Si"){
-    df$Minutes <- (df$Minutes+3)^2
-    histograma <- hist(df$Minutes)
-  } else {
-    df$Minutes <- df$Minutes
-    histograma <- hist(df$Minutes)
-  }
-  return(histograma)
-}
-
-histograma_funcion("Si")
-
